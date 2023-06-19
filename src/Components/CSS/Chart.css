@@ -1,0 +1,13 @@
+.CapeIndexChart{background: white;
+    margin-left: 15px;
+    margin-top: 20px;
+    height: 100%;
+    border-radius: 3px;
+    border-top:3px solid rgb(210, 214, 222);
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    height: calc(100% - 479px);
+
+}

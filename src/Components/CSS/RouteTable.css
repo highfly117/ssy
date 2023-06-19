@@ -1,0 +1,172 @@
+.RouteTableWrapper {
+    background: white;
+    margin-left: 50px;
+    margin-top: 25px;
+    border-radius: 3px;
+    border-top: 3px solid rgb(210, 214, 222);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    padding-left: 25px;
+    padding-right: 25px;
+    height: calc(100% - 58px);
+    overflow: none;
+}
+
+.routetable {
+    font-size: 13px;
+}
+
+.RouteTableBody {
+    display: block;
+    max-height: calc(100vh - 320px);
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table thead,
+table tbody tr {
+    display: table;
+    width: 100%;
+}
+
+.routeTableHeader {
+    border-bottom: 1px solid rgb(210, 214, 222);
+}
+
+
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+    background-color: white;
+}
+table thead {
+    display: table-row;
+    height: 40px;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+table td,
+table th {
+    width: 250px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table th {
+    background: #0076c8;
+    color: white;
+}
+
+
+
+
+.tabList {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabItem {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border-right: none;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+    font-weight: 700;
+}
+
+.tabItem:last-child {
+    border-right: 1px solid #ccc;
+    
+}
+
+.tabItem.active {
+    background-color: #0076c8;
+    color: white;
+}
+
+.tableContent {
+    display: flex;
+}
+
+.routeTable {
+    flex: 1;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.routeTable.active {
+    display: table;
+}
+
+.routeTable th,
+.routeTable td {
+    padding: 8px;
+    text-align: center;
+    
+}
+
+.routeTable th {
+    background-color: #0076c8;
+}
+
+table th {
+    background: #0076c8;
+    color: white;
+}
+
+
+table th.col-routeDescription,
+table td.col-routeDescription {
+    min-width: 215px;
+   
+}
+
+table th.col-routeCode,
+table td.col-routeCode {
+    min-width: 50px;
+}
+
+table th.col-periodCode,
+table td.col-periodCode {
+    min-width: 50px;
+}
+
+table th.col-periodType,
+table td.col-periodType {
+    min-width: 50px;
+}
+
+table th.col-periodStartDate,
+table td.col-periodStartDate {
+    min-width: 50px;
+}
+
+table th.col-periodEndDate,
+table td.col-periodEndDate {
+    min-width: 50px;
+}
+
+table th.col-price,
+table td.col-price {
+    min-width: 50px;
+}
+
+table th.col-doD,
+table td.col-doD {
+    min-width: 50px;
+}

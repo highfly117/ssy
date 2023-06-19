@@ -1,0 +1,14 @@
+.DailyCommentaryWrapper{
+    background: white;
+    margin-left: 15px;
+    margin-top: 25px;
+    height: 400px;
+    min-height: 400px;
+    border-radius: 3px;
+    border-top:3px solid rgb(210, 214, 222);
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    overflow: auto;
+}

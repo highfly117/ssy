@@ -1,0 +1,58 @@
+@import 'react-datepicker/dist/react-datepicker.css';
+
+.App {
+
+  overflow-y: hidden;
+}
+
+.dashboardwrapper{
+  margin-right: 0px;
+  position: absolute;
+  top: 75px;
+  height: calc(100% - 75px);
+}
+
+
+.row-1{
+  height: 8.33333333%;
+}
+.row-2{
+  height:16.66666667%;
+}
+.row-3{
+  height:25%;
+}
+.row-4{
+  height:33.33333333%;
+}
+.row-5{
+  height: 41.66666667%;
+}
+.row-6{
+  height:50%;
+}
+.row-7{
+  height:58.33333333%;
+}
+.row-8{
+  height:66.66666667%;
+}
+.row-9{
+  height:75%;
+}
+.row-10{
+  height:83.33333333%;
+}
+.row-11{
+  height:91.66666667%;
+}
+.row-12{
+  height:100%;
+}
+
+h1{
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+  font-size: 1.75rem;
+}
+
