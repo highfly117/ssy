@@ -12,10 +12,16 @@ import Chart from './Components/Chart';
 function App() {
 
   const [routetabledata, setroutedata] = useState(null)
-  const [selectedDate, setSelectedDate] = useState(new Date()) 
+  const [selectedDate, setSelectedDate] = useState(new Date() ) 
 
   const apiKey = 'BJ8uqhNZRSuPaXqC';
-  let date = selectedDate.toISOString().split('T')[0].replace(/-/g, '');
+  
+  let date = selectedDate.getFullYear().toString() + 
+  ('0' + (selectedDate.getMonth() + 1)).slice(-2) +
+  ('0' + selectedDate.getDate()).slice(-2);
+
+
+  console.log(date)
 
   useEffect(() => {
 

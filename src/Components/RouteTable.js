@@ -99,6 +99,10 @@ const RouteTable = ({ data }) => {
 
   const uniqueRouteCodes = [...new Set(tableData.map((data) => data.routeCode))];
 
+  const uniqueRoutes = tableData.reduce((unique, item) => {
+    return unique.some(route => route.routeCode === item.routeCode) ? unique : [...unique, { routeCode: item.routeCode, routeDescription: item.routeDescription }];
+  }, []);
+
   const handleTabClick = (routeCode) => {
     setActiveTab(routeCode);
   };
@@ -108,15 +112,15 @@ const RouteTable = ({ data }) => {
       <h1>Route Table: {tableData.length > 0 ? tableData[0].priceDate.split("T")[0] : 'No data found on this date'}</h1>
       <div className="tabContainer">
         <ul className="tabList">
-          {uniqueRouteCodes.map((routeCode, index) => (
-            <li
-              key={index}
-              className={`tabItem ${activeTab === routeCode ? 'active' : ''}`}
-              onClick={() => handleTabClick(routeCode)}
-            >
-              {routeCode}
-            </li>
-          ))}
+        {uniqueRoutes.map((route, index) => (
+    <li
+      key={index}
+      className={`tabItem ${activeTab === route.routeCode ? 'active' : ''}`}
+      onClick={() => handleTabClick(route.routeCode)}
+    >
+      {route.routeCode} / {route.routeDescription}
+    </li>
+  ))}
         </ul>
       </div>
       <div className="tableContent">
