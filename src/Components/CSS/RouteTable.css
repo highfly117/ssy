@@ -47,7 +47,7 @@ table tr:nth-child(odd) {
     background-color: white;
 }
 table thead {
-    display: table-row;
+   
     height: 40px;
 }
 
@@ -57,7 +57,7 @@ table {
 
 table td,
 table th {
-    width: 250px;
+  
     text-align: center;
     vertical-align: middle;
 }
@@ -66,8 +66,6 @@ table th {
     background: #0076c8;
     color: white;
 }
-
-
 
 
 .tabList {
@@ -130,43 +128,17 @@ table th {
 }
 
 
-table th.col-routeDescription,
-table td.col-routeDescription {
-    min-width: 215px;
-   
-}
-
-table th.col-routeCode,
-table td.col-routeCode {
-    min-width: 50px;
-}
-
 table th.col-periodCode,
 table td.col-periodCode {
-    min-width: 50px;
-}
-
-table th.col-periodType,
-table td.col-periodType {
-    min-width: 50px;
-}
-
-table th.col-periodStartDate,
-table td.col-periodStartDate {
-    min-width: 50px;
-}
-
-table th.col-periodEndDate,
-table td.col-periodEndDate {
-    min-width: 50px;
+    width: 33%;
 }
 
 table th.col-price,
 table td.col-price {
-    min-width: 50px;
+    width: 33%;
 }
 
 table th.col-doD,
 table td.col-doD {
-    min-width: 50px;
+    width: 34%;
 }

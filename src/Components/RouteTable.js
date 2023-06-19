@@ -40,14 +40,15 @@ const RouteTable = ({ data }) => {
 
   const renderTableData = (routeCode) => {
     let filteredData = tableData.filter((data) => data.routeCode === routeCode);
-  
-    if (sortConfig.key !== null && activeTab === routeCode) {
+
+    const currentSortConfig = sortConfig[routeCode];
+    if (currentSortConfig !== undefined) {
       filteredData.sort((a, b) => {
-        if (a[sortConfig.key] < b[sortConfig.key]) {
-          return sortConfig.direction === 'ascending' ? -1 : 1;
+        if (a[currentSortConfig.key] < b[currentSortConfig.key]) {
+          return currentSortConfig.direction === 'ascending' ? -1 : 1;
         }
-        if (a[sortConfig.key] > b[sortConfig.key]) {
-          return sortConfig.direction === 'ascending' ? 1 : -1;
+        if (a[currentSortConfig.key] > b[currentSortConfig.key]) {
+          return currentSortConfig.direction === 'ascending' ? 1 : -1;
         }
         return 0;
       });
@@ -62,15 +63,10 @@ const RouteTable = ({ data }) => {
     }
   
     return filteredData.map((data, index) => {
-      const { routeCode, routeDescription, periodCode, periodType, periodStartDate, periodEndDate, price, doD } = data;
+      const { periodCode, price, doD } = data;
       return (
         <tr key={index}>
-          <td className="col-routeCode">{routeCode}</td>
-          <td className="col-routeDescription">{routeDescription}</td>
           <td className="col-periodCode">{periodCode}</td>
-          <td className="col-periodType">{periodType}</td>
-          <td className="col-periodStartDate">{periodStartDate.split("T")[0]}</td>
-          <td className="col-periodEndDate">{periodEndDate.split("T")[0]}</td>
           <td className="col-price">{price}</td>
           <td className="col-doD">{doD}</td>
         </tr>
@@ -79,14 +75,9 @@ const RouteTable = ({ data }) => {
   };
 
   const columnNames = {
-    routeCode: "Route Code",
-    routeDescription: "Route Description",
     periodCode: "Period Code",
-    periodType: "Period Type",
-    periodStartDate: "Period Start Date",
-    periodEndDate: "Period End Date",
-    price: "Price",
-    doD: "DoD",
+    price: "End of Day Price",
+    doD: "Day-on-Day Movements",
   };
 
   const renderTableHeader = () => {
@@ -94,8 +85,7 @@ const RouteTable = ({ data }) => {
       return <></>;
     }
 
-    let header = Object.keys(tableData[0]);
-    header.shift(); 
+    let header = ['periodCode', 'price', 'doD'];
     return header.map((key, index) => {
       return <th
       className={`col-${key}`}
