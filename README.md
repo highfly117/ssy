@@ -8,17 +8,17 @@ https://github.com/highfly117/ssy
 A deployed version can be found here
 https://ssy-git-master-highfly117.vercel.app/
 
-## Instll Node.js 
+## Install Node.js 
 
-first, you will need to install node.js and check that you have npm, a package manager that comes with Node
+Install node.js and check that you have npm, a package manager that comes with Node.
 
-## install node modules
+## Install node modules
 
-Run the cmd "npm install" This will install all of the dependencies that are required to run the program.
+Run the cmd "npm install" This will install all the dependencies required to run the program.
 
 ## Available Scripts
 
-In the project directory (SSY), you can run:
+In the project directory (SSY), you can run: npm start
 
 ### `npm start`
 
